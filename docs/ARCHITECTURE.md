@@ -154,36 +154,18 @@
 ## 📊 Diagrama (alto nivel)
 
 ```mermaid
-
-flowchart LR
-
-  subgraph Layout
-    A[Aside (perfil/menú/switch)]
-    B[Main (router-outlet)]
-  end
-
-  subgraph App
-    C[Features: pages/*]
-    D[Shared: ui/utilities]
-    E[Core: models/services]
-  end
-
-  subgraph Config
-    F[app.config.ts]
-    G[firebase-credentials.ts]
-    H[firebase.json]
-  end
-
-  A --> B
-  B --> C
-  D --> C
-  E --> C
-  F --> C
-  F --> E
-  G --> F
-  H -. hosting .-> B
+graph LR
+  A[Aside] --> B[Main router outlet];
+  B --> C[Features pages];
+  B --> D[Shared ui utilities];
+  B --> E[Core models services];
+  F[app.config.ts] --> B;
+  F --> E;
+  G[src environments firebase credentials.ts] --> F;
+  H[firebase.json] -.-> B;
 
 ```
+
 
 ---
 
