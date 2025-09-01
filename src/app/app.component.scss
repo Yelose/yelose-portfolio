@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100dvh;
+  aside {
+    flex: 1;
+  }
+  section {
+    flex: 3;
+    overflow-y: auto;
+  }
+}
